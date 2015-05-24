@@ -1,0 +1,6 @@
+go to http://device.address.here.20/admin.cgi
+in Command Line box, paste the following commands one by one, edited to your liking.
+
+echo "ifconfig br0 down; ifconfig wifi0 down; ifconfig wifi0 hw ether fe:ed:de:ad:be:ef; ifconfig wifi0 up; ifconfig br0 up" >  /etc/persistent/rc.prestart
+cfgmtd -w -p /etc/
+reboot
